@@ -53,18 +53,6 @@
                         "description": "Success register user",
                         "content": {
                             "application/json": {
-                                "examples": {
-                                    "success": {
-                                        "description": "Success registered user",
-                                        "value": {
-                                            "data": {
-                                                "id": 1,
-                                                "name": "anhar saja",
-                                                "username": "anhar"
-                                            }
-                                        }
-                                    }
-                                },
                                 "schema": {
                                     "type": "object",
                                     "properties": {
@@ -83,6 +71,24 @@
                                             }
                                         },
                                         "errors": {
+                                            "type": "object"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400":{
+                        "description": "Error register",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "object"
+                                        },
+                                        "name": {
                                             "type": "object"
                                         }
                                     }
@@ -155,11 +161,7 @@
                 "parameters": [
                     {
                         "name": "Authorization",
-                        "in": "header",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
+                        "in": "header"
                     }
                 ],
                 "responses": {
@@ -199,10 +201,7 @@
                 "parameters": [
                     {
                         "name": "Authorization",
-                        "in": "header",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
+                        "in": "header"
                         }
                     }
                 ],
@@ -263,11 +262,7 @@
                 "parameters": [
                     {
                         "name": "Authorization",
-                        "in": "header",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
+                        "in": "header"
                     }
                 ],
                 "responses": {
